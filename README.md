@@ -167,16 +167,16 @@ lib/
    android/app/src/main/res/
    ```
 2. Use the following file names (as shown above):
-   - `Screenshot_1762069032.jpg` (Splash Screen)
-   - `Screenshot_1762069036.jpg` (Dashboard)
-   - `Screenshot_1762069040.jpg` (Bluetooth Device Connect)
-   - `Screenshot_1762069072.jpg` (Risk Factors)
-   - `Screenshot_1762069067.jpg` (Personal Info Step)
-   - `Screenshot_1762069069.jpg` (Health Metrics Step)
-   - `Screenshot_1762069085.jpg` (Risk Assessment Result)
-   - `Screenshot_1762069077.jpg` (Review Information)
-   - `Screenshot_1762069056.jpg` (AI Assistant Chat)
-   - `image.jpg` (ESP32 Setup)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069032.jpg) (Splash Screen)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069036.jpg) (Dashboard)
+   - `![Alt Text](android/app/src/main/res/Screenshot_1762069040.jpg) (Bluetooth Device Connect)
+   - `![Alt Text](android/app/src/main/res/Screenshot_1762069072.jpg) (Risk Factors)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069067.jpg) (Personal Info Step)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069069.jpg) (Health Metrics Step)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069085.jpg) (Risk Assessment Result)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069077.jpg) (Review Information)
+   - ![Alt Text](android/app/src/main/res/Screenshot_1762069056.jpg) (AI Assistant Chat)
+   - ![Alt Text](android/app/src/main/res/image.jpg) (ESP32 Setup)
 3. Reference these in your README as shown above using the markdown image syntax:
    ```
    ![Alt Text](android/app/src/main/res/FILENAME.jpg)
@@ -205,4 +205,5 @@ Developed with ❤️ by **Omkar Madkar**
 👨‍💻 [GitHub Profile](https://github.com/omkarMadkar)
 
 ***
+
 
