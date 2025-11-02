@@ -86,43 +86,43 @@ After push, GitHub will render the images referenced by relative paths in the RE
 
 ### Splash Screen
 
-![Splash Screen](android/app/src/main/res/Screenshot_1762069032.jpg)
+![Splash Screen](images/Screenshot_1762069032.jpg)
 
 ### Dashboard – Health Metrics
 
-![Dashboard Health Metrics](android/app/src/main/res/Screenshot_1762069036.jpg)
+![Dashboard Health Metrics](images/Screenshot_1762069036.jpg)
 
 ### Bluetooth Device Connect
 
-![Bluetooth Device Connect](android/app/src/main/res/Screenshot_1762069040.jpg)
+![Bluetooth Device Connect](images/Screenshot_1762069040.jpg)
 
 ### Risk Factors (Multi-step Form)
 
-![Risk Factors Step](android/app/src/main/res/Screenshot_1762069072.jpg)
+![Risk Factors Step](images/Screenshot_1762069072.jpg)
 
 ### Personal Info Step
 
-![Personal Info Step](android/app/src/main/res/Screenshot_1762069067.jpg)
+![Personal Info Step](images/Screenshot_1762069067.jpg)
 
 ### Health Metrics Step
 
-![Health Metrics Step](android/app/src/main/res/Screenshot_1762069069.jpg)
+![Health Metrics Step](images/Screenshot_1762069069.jpg)
 
 ### Risk Assessment Result
 
-![Risk Assessment Result](android/app/src/main/res/Screenshot_1762069085.jpg)
+![Risk Assessment Result](images/Screenshot_1762069085.jpg)
 
 ### Review & Predict Step
 
-![Review Your Information](android/app/src/main/res/Screenshot_1762069077.jpg)
+![Review Your Information](images/Screenshot_1762069077.jpg)
 
 ### AI Health Assistant
 
-![AI Health Assistant](android/app/src/main/res/Screenshot_1762069056.jpg)
+![AI Health Assistant](images/Screenshot_1762069056.jpg)
 
 ### Hardware Setup (ESP32)
 
-![ESP32 Setup](android/app/src/main/res/image.jpg)
+![ESP32 Setup](images/image.jpg)
 
 ---
 
@@ -185,3 +185,4 @@ Once you add the images and push, GitHub will render the images in README.md aut
 ---
 
 *Developed with ❤️ by Omkar Madkar — MediBuddy*
+
