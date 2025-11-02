@@ -1,532 +1,208 @@
-# MediBuddy - Health Monitoring App
+Here is a properly formatted README file for your MediBuddy health monitoring app that includes code snippets for adding your app UI/UX screenshots and hardware images. It also provides step-by-step instructions on where to place these images in your Android project structure for best results.
 
-A modern Flutter application for real-time health monitoring using ESP32 devices with Bluetooth connectivity.
+***
 
-## 🏥 Features
+# 🩺 MediBuddy – Health Monitoring App
 
-### Core Functionality
-- **Real-time Health Monitoring**: Live heart rate and SpO₂ monitoring from ESP32 device
-- **Bluetooth Connectivity**: Seamless connection to ESP32 health monitoring devices
-- **Disease Risk Assessment**: Comprehensive heart disease risk prediction based on health metrics
-- **Beautiful UI**: Modern glassmorphism design with smooth animations
+A modern Flutter application for **real-time health monitoring** using an ESP32-based IoT health sensor.  
+Connect via Bluetooth to capture vitals like **Heart Rate (BPM)** and **SpO₂**, get live data visualizations, risk analysis, and a sleek glassmorphism UI.
 
-### Health Monitoring
-- Live heart rate (BPM) display with trend indicators
-- SpO₂ (blood oxygen saturation) monitoring
-- Real-time data visualization with interactive charts
-- Device status monitoring (battery, connection status, uptime)
+***
 
-### Risk Assessment
-- Multi-step health questionnaire
-- Comprehensive risk factor analysis including:
-  - Age, gender, smoking status
-  - Blood pressure, cholesterol levels
-  - Diabetes, chest pain history
-  - HDL, LDL, triglycerides
-  - Fasting glucose levels
-- Instant risk level calculation (Low/Moderate/High)
-- Confidence scoring and personalized recommendations
+## 🌟 Features
 
-### User Interface
-- **Splash Screen**: Animated welcome screen with app branding
-- **Bluetooth Connection**: Easy device pairing and connection management
-- **Health Dashboard**: Live health cards with glassmorphism effects
-- **Interactive Charts**: Real-time trend visualization
-- **Settings Page**: App preferences and device management
-- **Responsive Design**: Optimized for mobile devices
+### 🧠 Core
+- Real-time health monitoring from ESP32 sensors
+- Bluetooth connectivity and auto-reconnect
+- Disease risk assessment based on medical parameters
+- Elegant UI with glassmorphism and animations
 
-## 🛠 Technical Stack
+### ❤️ Health Monitoring
+- Live BPM & SpO₂ display
+- Real-time line charts for vitals
+- Device connection status with battery level
+- Responsive layout for phones and tablets
 
-### Flutter Dependencies
-- `flutter_bluetooth_serial`: Bluetooth connectivity
-- `fl_chart`: Data visualization and charts
-- `font_awesome_flutter`: Icon library
-- `json_annotation`: JSON serialization
-- `shared_preferences`: Local data storage
-- `permission_handler`: Device permissions
+### 🔍 Risk Assessment
+- Multi-step heart disease prediction form
+- Inputs: age, gender, smoking, BP, cholesterol, diabetes, chest pain, HDL/LDL/TG, fasting glucose
+- Instant risk score and recommendations
 
-### Architecture
-- **Models**: Data classes for health data, device info, and predictions
-- **Services**: Bluetooth service for ESP32 communication
-- **Components**: Reusable UI components (health cards, charts, status cards)
-- **Pages**: Main app screens (dashboard, forms, settings)
-- **Theme**: Centralized styling with glassmorphism effects
+### 🎨 UI Design
+- Splash screen with logo animation
+- Dashboard with modular cards
+- Bluetooth pairing/connection page
+- Settings for preferences and device management
 
-## 📱 App Structure
+***
 
+## 🖼️ App Screenshots
+
+Below are some highlights of MediBuddy UI and hardware integration:
+
+### Splash Screen
+
+![Splash Screen](android/app/src/main/res/S
+
+
+
+### Dashboard – Health Metrics
+
+![Dashboard Health Metrics](android/app/src/main/res/Screenshot_ Device Connection
+
+![Bluetooth Device Connect](android/app/src/main/res/Screenshot_ Disease Risk Assessment (Risk Factors)
+
+![Risk Factors Step](android/app/src/main/res/Screenshot_ Assessment – Personal Information Step
+
+![Personal Info Step](android/app/src/main/res/Screenshot_ – Health Metrics Step
+
+![Health Metrics](android/app/src/main/res/Screenshot_ Assessment – Result (Low Risk)
+
+![Risk Assessment Result](android/app/src/main/res/Screenshot_ & Predict Step
+
+![Review Your Information](android/app/src/main/res/Screenshot_ Health Assistant Chat
+
+![AI Health Assistant](android/app/src/main/res/Screenshot_32 Hardware Setup
+
+![ESP32 Health Monitor Setup](android/app/src/main/res/image Tech Stack
+
+### ⚙️ Flutter Dependencies
+```yaml
+dependencies:
+  flutter_bluetooth_serial: ^0.4.0
+  fl_chart: ^0.64.0
+  font_awesome_flutter: ^10.4.0
+  json_annotation: ^4.8.1
+  shared_preferences: ^2.2.0
+  permission_handler: ^11.0.0
 ```
+
+***
+
+## 📁 App Structure
+
+```bash
 lib/
-├── main.dart                 # App entry point
-├── models/                   # Data models
-│   ├── health_data.dart     # Health monitoring data
-│   └── prediction_data.dart # Risk assessment data
-├── services/                 # Business logic
-│   └── bluetooth_service.dart # ESP32 communication
-├── pages/                    # App screens
-│   ├── splash_screen.dart   # Welcome screen
-│   ├── bluetooth_connection_page.dart # Device pairing
-│   ├── dashboard.dart       # Main health dashboard
-│   ├── heart_disease_form.dart # Risk assessment form
-│   ├── prediction_result_page.dart # Results display
-│   └── settings_page.dart   # App settings
-├── components/               # Reusable UI components
-│   ├── health_card.dart     # Health metric cards
-│   ├── health_line_chart.dart # Data visualization
-│   └── device_status_card.dart # Device status display
-└── theme/                    # App styling
-    └── app_theme.dart       # Theme configuration
+├─ main.dart
+├─ models/
+│  ├─ health_data.dart
+│  └─ prediction_data.dart
+├─ services/
+│  └─ bluetooth_service.dart
+├─ pages/
+│  ├─ splash_screen.dart
+│  ├─ bluetooth_connection_page.dart
+│  ├─ dashboard.dart
+│  ├─ heart_disease_form.dart
+│  ├─ prediction_result_page.dart
+│  └─ settings_page.dart
+├─ components/
+│  ├─ health_card.dart
+│  ├─ health_line_chart.dart
+│  └─ device_status_card.dart
+└─ theme/
+   └─ app_theme.dart
 ```
+***
 
-## 🔧 ESP32 Integration
+## 🔌 ESP32 Integration
 
-### Required ESP32 Code
-The app is designed to work with the provided ESP32 health monitoring code that includes:
-- MAX30105 heart rate and SpO₂ sensor
-- Bluetooth Classic communication
-- JSON data transmission
-- OLED display for local monitoring
+### 🧠 Hardware Features
 
-### Data Format
-The ESP32 sends JSON data in the following format:
+* Sensor: MAX30105 Heart Rate & SpO₂ sensor
+* Communication: Bluetooth Classic (Serial)
+* Display: 128×64 OLED screen
+* Data Format: JSON packets sent to app
+
+### 📡 Sample JSON Data
+
 ```json
 {
-  "timestamp": 1234567890,
-  "heartRate": 75,
-  "spo2": 98,
+  "timestamp": 1724567890,
+  "heartRate": 78,
+  "spo2": 97,
   "validHR": 1,
   "validSpO2": 1
 }
 ```
 
-### Commands
-The app can send commands to the ESP32:
-- `status`: Request device status
-- `info`: Request system information
-- `reset`: Restart the device
+### 🛠️ Supported Commands
+
+| Command  | Description                     |
+| -------- | ------------------------------- |
+| `status` | Returns current sensor readings |
+| `info`   | Returns device info JSON        |
+| `reset`  | Reboots ESP32 device            |
+
+***
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Flutter SDK (3.7.2 or higher)
-- Android Studio / VS Code
-- ESP32 device with health monitoring sensors
-- Android device with Bluetooth support
-
-### Installation
-1. Clone the repository
-2. Navigate to the project directory
+1. Clone the repository  
+2. Navigate to the project directory  
 3. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
+    ```bash
+    flutter pub get
+    ```
 4. Generate JSON serialization code:
-   ```bash
-   flutter packages pub run build_runner build
-   ```
+    ```bash
+    flutter packages pub run build_runner build
+    ```
 5. Run the app:
-   ```bash
-   flutter run
-   ```
+    ```bash
+    flutter run
+    ```
 
 ### ESP32 Setup
-1. Upload the provided ESP32 code to your device
-2. Ensure the device name is "ESP32-Health-Pro"
-3. Power on the ESP32 device
-4. Open the MediBuddy app and scan for devices
-5. Connect to your ESP32 device
+1. Flash the ESP32 firmware
+2. Set Bluetooth name to **ESP32-Health-Pro**
+3. Power on ESP32 → open MediBuddy → tap **Scan Devices**
+4. Connect and start monitoring!
 
-## 📊 Usage
+***
 
-### Health Monitoring
-1. Connect to your ESP32 device via Bluetooth
-2. Place your finger on the sensor
-3. View real-time heart rate and SpO₂ data
-4. Monitor trends with interactive charts
-5. Check device status and battery level
+## 🗂️ Adding Screenshots/Images
 
-### Risk Assessment
-1. Navigate to the Disease Prediction section
-2. Fill out the multi-step health questionnaire
-3. Review your information
-4. Get instant risk assessment results
-5. View personalized recommendations
+1. Place all screenshot images in your Android project at:  
+   ```
+   android/app/src/main/res/
+   ```
+2. Use the following file names (as shown above):
+   - `Screenshot_1762069032.jpg` (Splash Screen)
+   - `Screenshot_1762069036.jpg` (Dashboard)
+   - `Screenshot_1762069040.jpg` (Bluetooth Device Connect)
+   - `Screenshot_1762069072.jpg` (Risk Factors)
+   - `Screenshot_1762069067.jpg` (Personal Info Step)
+   - `Screenshot_1762069069.jpg` (Health Metrics Step)
+   - `Screenshot_1762069085.jpg` (Risk Assessment Result)
+   - `Screenshot_1762069077.jpg` (Review Information)
+   - `Screenshot_1762069056.jpg` (AI Assistant Chat)
+   - `image.jpg` (ESP32 Setup)
+3. Reference these in your README as shown above using the markdown image syntax:
+   ```
+   ![Alt Text](android/app/src/main/res/FILENAME.jpg)
+   ```
+   Where `FILENAME.jpg` is replaced with each actual screenshot/hardware image filename.
 
-### Settings
-1. Access app settings from the dashboard
-2. Manage Bluetooth connections
-3. Configure notifications and auto-sync
-4. View app information and privacy policy
+***
 
-## 🎨 Design Features
+## 📜 License
 
-### Glassmorphism UI
-- Semi-transparent cards with blur effects
-- Modern gradient backgrounds
-- Smooth animations and transitions
-- Medical-themed color scheme (teal/blue)
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
-### Animations
-- Splash screen with logo animation
-- Pulsing health indicators
-- Smooth data transitions
-- Loading states and progress indicators
+***
 
-### Responsive Design
-- Optimized for mobile devices
-- Adaptive layouts for different screen sizes
-- Touch-friendly interface elements
+## 💬 Support
 
-## 🔒 Privacy & Security
+* Open an issue on [GitHub Issues](https://github.com/omkarMadkar/Helath-Monitor/issues)
+* Email the dev team
+* Refer to the Troubleshooting section above
 
-- All health data is stored locally on the device
-- No data is transmitted to external servers
-- Bluetooth communication is encrypted
-- User consent required for all data collection
+***
 
-## 🐛 Troubleshooting
+## 🧭 Credits
 
-### Common Issues
-1. **Bluetooth Connection Failed**
-   - Ensure ESP32 is powered on and in pairing mode
-   - Check Bluetooth permissions in device settings
-   - Try restarting the app and scanning again
+Developed with ❤️ by **Omkar Madkar**  
+👨‍💻 [GitHub Profile](https://github.com/omkarMadkar)
 
-2. **No Health Data Received**
-   - Verify finger placement on sensor
-   - Check ESP32 device status
-   - Ensure stable Bluetooth connection
-
-3. **App Crashes**
-   - Check Flutter and dependency versions
-   - Clear app data and restart
-   - Verify device compatibility
-
-## 📈 Future Enhancements
-
-- [ ] Data export and sharing
-- [ ] Historical data analysis
-- [ ] Multiple device support
-- [ ] Cloud synchronization
-- [ ] Advanced health insights
-- [ ] Wearable device integration
-
-## ESP32 CODE
-
-#include <Wire.h>
-#include "MAX30105.h"
-#include "heartRate.h"
-#include "spo2_algorithm.h"
-#include "BluetoothSerial.h"
-#include <U8g2lib.h>
-
-// OLED and Sensor initialization
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
-MAX30105 particleSensor;
-BluetoothSerial SerialBT;
-
-// Sensor and processing variables
-int32_t heartRate = 0;
-int8_t validHeartRate = 0;
-int32_t spo2 = 0;
-int8_t validSPO2 = 0;
-uint32_t irValue = 0;
-uint32_t irBuffer[100], redBuffer[100];
-
-// Timing control variables
-unsigned long lastBeatTime = 0;
-unsigned long lastTransmission = 0;
-unsigned long lastUIUpdate = 0;
-unsigned long bootTime = 0;
-
-// Finger detection buffer
-const uint32_t FINGER_THRESHOLD = 50000;
-const int DETECTION_SAMPLES = 10;
-uint32_t fingerCheckBuffer[DETECTION_SAMPLES];
-int fingerCheckIndex = 0;
-
-// Heart rate smoothing
-const byte RATE_ARRAY_SIZE = 4;
-long rateArray[RATE_ARRAY_SIZE];
-byte rateCounter = 0;
-long rateSum = 0;
-
-bool fingerDetected = false;
-bool systemReady = false;
-
-void setup() {
-  Serial.begin(115200);
-  bootTime = millis();
-
-  u8g2.begin();
-  SerialBT.begin("ESP32-Health-Pro");
-  Serial.println("Bluetooth Serial Started: ESP32-Health-Pro");
-
-  Wire.begin(21, 22);
-
-  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
-    displayError("Sensor Error", "Check Wiring");
-    while (1) delay(1000);
-  }
-
-  particleSensor.setup();
-  particleSensor.setPulseAmplitudeRed(0x0A);
-  particleSensor.setPulseAmplitudeGreen(0);
-  particleSensor.enableDIETEMPRDY();
-
-  for (int i = 0; i < RATE_ARRAY_SIZE; i++) rateArray[i] = 0;
-  for (int i = 0; i < DETECTION_SAMPLES; i++) fingerCheckBuffer[i] = 0;
-
-  systemReady = true;
-  Serial.println("System Ready");
-}
-
-void loop() {
-  updateSensorData();
-  checkFingerPresence();
-
-  if (millis() - lastUIUpdate > 200) {
-    updateDisplay();
-    lastUIUpdate = millis();
-  }
-
-  if (fingerDetected && millis() - lastTransmission > 2000) {
-    transmitData();
-    lastTransmission = millis();
-  }
-
-  if (SerialBT.available()) {
-    handleBluetoothCommands();
-  }
-
-  delay(20);
-}
-
-void updateSensorData() {
-  irValue = particleSensor.getIR();
-
-  if (fingerDetected && irValue > FINGER_THRESHOLD) {
-    if (checkForBeat(irValue)) {
-      long delta = millis() - lastBeatTime;
-      lastBeatTime = millis();
-
-      int bpm = 60 / (delta / 1000.0);
-
-      if (bpm > 20 && bpm < 255) {
-        rateArray[rateCounter % RATE_ARRAY_SIZE] = bpm;
-        rateSum = 0;
-        for (byte i = 0; i < RATE_ARRAY_SIZE; i++) {
-          rateSum += rateArray[i];
-        }
-        heartRate = rateSum / RATE_ARRAY_SIZE;
-        rateCounter++;
-      }
-    }
-
-    static unsigned long lastSpO2Calc = 0;
-    if (millis() - lastSpO2Calc > 3000) {
-      calculateSpO2();
-      lastSpO2Calc = millis();
-    }
-  } else {
-    if (!fingerDetected) {
-      heartRate = 0;
-      spo2 = 0;
-      validSPO2 = 0;
-      validHeartRate = 0;
-    }
-  }
-
-  particleSensor.nextSample();
-}
-
-void checkFingerPresence() {
-  fingerCheckBuffer[fingerCheckIndex] = irValue;
-  fingerCheckIndex = (fingerCheckIndex + 1) % DETECTION_SAMPLES;
-
-  uint32_t average = 0;
-  for (int i = 0; i < DETECTION_SAMPLES; i++) {
-    average += fingerCheckBuffer[i];
-  }
-  average /= DETECTION_SAMPLES;
-
-  bool previousFingerDetected = fingerDetected;
-  fingerDetected = (average > FINGER_THRESHOLD);
-
-  if (previousFingerDetected && !fingerDetected) {
-    heartRate = 0;
-    spo2 = 0;
-    rateCounter = 0;
-    rateSum = 0;
-    for (int i = 0; i < RATE_ARRAY_SIZE; i++) rateArray[i] = 0;
-  }
-}
-
-void calculateSpO2() {
-  memset(irBuffer, 0, sizeof(irBuffer));
-  memset(redBuffer, 0, sizeof(redBuffer));
-
-  for (byte i = 0; i < 100; i++) {
-    while (!particleSensor.available()) {
-      particleSensor.check();
-      delay(1);
-    }
-    redBuffer[i] = particleSensor.getRed();
-    irBuffer[i] = particleSensor.getIR();
-    particleSensor.nextSample();
-  }
-
-  maxim_heart_rate_and_oxygen_saturation(
-    irBuffer, 100, redBuffer,
-    &spo2, &validSPO2,
-    &heartRate, &validHeartRate
-  );
-
-  if (!validSPO2 || spo2 <= 0 || spo2 > 100) {
-    uint32_t redSum = 0, irSum = 0;
-    for (int i = 0; i < 100; i++) {
-      redSum += redBuffer[i];
-      irSum += irBuffer[i];
-    }
-    if (irSum > 0) {
-      float ratio = (float)redSum / irSum;
-      if (ratio > 0.5 && ratio < 2.0) {
-        spo2 = 110 - (25 * ratio);
-        spo2 = constrain(spo2, 85, 100);
-        validSPO2 = 1;
-      }
-    }
-  }
-}
-
-// ============= UI IMPROVEMENT STARTS HERE =================
-void updateDisplay() {
-  u8g2.clearBuffer();
-
-  if (!systemReady) return;
-
-  if (!fingerDetected) {
-    displayWaitingScreen();
-  } else {
-    displayHealthData();
-  }
-
-  u8g2.sendBuffer();
-}
-
-void displayWaitingScreen() {
-  u8g2.setFont(u8g2_font_helvR10_tr);
-  String msg = "Place Finger on Sensor";
-  int width = u8g2.getStrWidth(msg.c_str());
-  u8g2.drawStr((128 - width) / 2, 32, msg.c_str());
-
-  // Small pulsing heart animation
-  static bool toggle = false;
-  toggle = !toggle;
-  if (toggle) {
-    u8g2.setFont(u8g2_font_open_iconic_all_2x_t);
-    u8g2.drawGlyph(56, 55, 0x0048); // heart icon
-  }
-}
-
-void displayHealthData() {
-  u8g2.setFont(u8g2_font_helvB12_tr);
-  u8g2.drawStr(10, 15, "Health Monitor");
-
-  // Draw separator line
-  u8g2.drawLine(0, 20, 128, 20);
-
-  // Heart Rate
-  u8g2.setFont(u8g2_font_open_iconic_all_2x_t);
-  u8g2.drawGlyph(5, 45, 0x0048); // Heart Icon
-  u8g2.setFont(u8g2_font_helvB14_tr);
-  String hrStr = (heartRate > 0) ? String(heartRate) + " BPM" : "---";
-  u8g2.drawStr(35, 45, hrStr.c_str());
-
-  // SpO2
-  u8g2.setFont(u8g2_font_open_iconic_all_2x_t);
-  u8g2.drawGlyph(5, 65, 0x004F); // O2 Icon (approximation)
-  u8g2.setFont(u8g2_font_helvB14_tr);
-  String spo2Str = (validSPO2 && spo2 > 70 && spo2 <= 100) ? String(spo2) + "%" : "---";
-  u8g2.drawStr(35, 65, spo2Str.c_str());
-}
-
-void displayError(String title, String msg) {
-  u8g2.clearBuffer();
-  u8g2.setFont(u8g2_font_helvB10_tr);
-  int wTitle = u8g2.getStrWidth(title.c_str());
-  int wMsg = u8g2.getStrWidth(msg.c_str());
-  u8g2.drawStr((128 - wTitle)/2, 25, title.c_str());
-  u8g2.drawStr((128 - wMsg)/2, 40, msg.c_str());
-  u8g2.sendBuffer();
-}
-// ============= UI IMPROVEMENT ENDS HERE =================
-
-void transmitData() {
-  if(!fingerDetected) return;
-
-  String jsonData = "{";
-  jsonData += "\"timestamp\":" + String(millis()) + ",";
-  jsonData += "\"heartRate\":" + String(heartRate) + ",";
-  jsonData += "\"spo2\":" + String(spo2) + ",";
-  jsonData += "\"validHR\":" + String(validHeartRate) + ",";
-  jsonData += "\"validSpO2\":" + String(validSPO2);
-  jsonData += "}";
-
-  SerialBT.println(jsonData);
-  Serial.println("Sent: " + jsonData);
-}
-
-void handleBluetoothCommands() {
-  String command = SerialBT.readStringUntil('\n');
-  command.trim();
-  command.toLowerCase();
-
-  if (command == "status") sendDetailedStatus();
-  else if (command == "reset") ESP.restart();
-  else if (command == "info") sendSystemInfo();
-}
-
-void sendDetailedStatus() {
-  String statusMsg = "{";
-  statusMsg += "\"device\":\"ESP32-Health-Pro\",";
-  statusMsg += "\"uptime\":" + String((millis() - bootTime) / 1000) + ",";
-  statusMsg += "\"heartRate\":" + String(heartRate) + ",";
-  statusMsg += "\"spo2\":" + String(spo2);
-  statusMsg += "}";
-  SerialBT.println(statusMsg);
-}
-
-void sendSystemInfo() {
-  String infoMsg = "{";
-  infoMsg += "\"chipModel\":\"" + String(ESP.getChipModel()) + "\",";
-  infoMsg += "\"cpuFreq\":" + String(ESP.getCpuFreqMHz()) + ",";
-  infoMsg += "\"freeHeap\":" + String(ESP.getFreeHeap());
-  infoMsg += "}";
-  SerialBT.println(infoMsg);
-}
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in the repository
-- Contact the development team
-- Check the troubleshooting section
-
----
-
-**MediBuddy** - Your Personal Health Companion 🏥❤️#   M e d i B u d d y - A p p - F i n a l 
- 
- 
+***
