@@ -186,3 +186,4 @@ Once you add the images and push, GitHub will render the images in README.md aut
 
 *Developed with ❤️ by Omkar Madkar — MediBuddy*
 
+
