@@ -1,209 +1,187 @@
+# 🩺 MediBuddy – Health Monitoring App
 
-***
+A modern Flutter application for **real-time health monitoring** using an **ESP32-based IoT health sensor**. MediBuddy connects via Bluetooth to capture vitals like **Heart Rate (BPM)** and **SpO₂**, providing live data visualization, risk analysis, and a sleek glassmorphism UI.
+
+---
+
+## 📌 Quick notes before you paste
+
+1. **Place the screenshot image files** inside `android/app/src/main/res/` in your repo. The README uses **relative paths**, so the images must be committed to the repository for GitHub to display them.
+2. Filenames are **case-sensitive** on many systems and on GitHub. Use the exact names shown below.
+3. If images are large (>100 MB) GitHub will reject them — keep them under a few MB each.
+
+---
+
+## 📁 Where to put images (recommended)
+
+Create this folder inside your project repo (run from repo root):
+
+```bash
+mkdir -p android/app/src/main/res
+# copy your screenshot files into the folder, or put them there from Android Studio
+```
+
+Use these exact filenames (or update the README image paths to match your filenames):
+
+```
+android/app/src/main/res/Screenshot_1762069032.jpg
+android/app/src/main/res/Screenshot_1762069036.jpg
+android/app/src/main/res/Screenshot_1762069040.jpg
+android/app/src/main/res/Screenshot_1762069072.jpg
+android/app/src/main/res/Screenshot_1762069067.jpg
+android/app/src/main/res/Screenshot_1762069069.jpg
+android/app/src/main/res/Screenshot_1762069085.jpg
+android/app/src/main/res/Screenshot_1762069077.jpg
+android/app/src/main/res/Screenshot_1762069056.jpg
+android/app/src/main/res/image.jpg
+```
+
+---
+
+## ✅ How to add images and push to GitHub (step-by-step)
+
+1. Put your image files into `android/app/src/main/res/`.
+2. From the repo root run:
+
+```bash
+# show files
+ls -la android/app/src/main/res/
+
+# stage images
+git add android/app/src/main/res/*
+
+# commit
+git commit -m "Add MediBuddy screenshots to res folder"
+
+# push to your repo (adjust remote/branch if needed)
+git push origin main
+```
+
+After push, GitHub will render the images referenced by relative paths in the README.
+
+---
+
+## 📷 README content (single-file — copy & paste)
+
+> Paste the whole content of this file as your `README.md` at the repository root. The image links below reference files expected to be in `android/app/src/main/res/`.
+
+---
 
 # 🩺 MediBuddy – Health Monitoring App
 
-A modern Flutter application for **real-time health monitoring** using an ESP32-based IoT health sensor.  
-Connect via Bluetooth to capture vitals like **Heart Rate (BPM)** and **SpO₂**, get live data visualizations, risk analysis, and a sleek glassmorphism UI.
+*A modern Flutter application for real-time health monitoring using ESP32 devices with Bluetooth connectivity.*
 
-***
+## 🏥 Features
 
-## 🌟 Features
+* **Real-time Health Monitoring**: Live heart rate and SpO₂ monitoring from ESP32 device
+* **Bluetooth Connectivity**: Seamless connection to ESP32 health monitoring devices
+* **Disease Risk Assessment**: Heart disease risk prediction based on health metrics
+* **Beautiful UI**: Modern glassmorphism design with smooth animations
 
-### 🧠 Core
-- Real-time health monitoring from ESP32 sensors
-- Bluetooth connectivity and auto-reconnect
-- Disease risk assessment based on medical parameters
-- Elegant UI with glassmorphism and animations
+---
 
-### ❤️ Health Monitoring
-- Live BPM & SpO₂ display
-- Real-time line charts for vitals
-- Device connection status with battery level
-- Responsive layout for phones and tablets
+## 📁 Screenshots / UI Preview
 
-### 🔍 Risk Assessment
-- Multi-step heart disease prediction form
-- Inputs: age, gender, smoking, BP, cholesterol, diabetes, chest pain, HDL/LDL/TG, fasting glucose
-- Instant risk score and recommendations
-
-### 🎨 UI Design
-- Splash screen with logo animation
-- Dashboard with modular cards
-- Bluetooth pairing/connection page
-- Settings for preferences and device management
-
-***
-
-## 🖼️ App Screenshots
-
-Below are some highlights of MediBuddy UI and hardware integration:
+> Ensure these files exist in `android/app/src/main/res/`
 
 ### Splash Screen
 
-![Splash Screen](android/app/src/main/res/S
-
-
+![Splash Screen](android/app/src/main/res/Screenshot_1762069032.jpg)
 
 ### Dashboard – Health Metrics
 
-![Dashboard Health Metrics](android/app/src/main/res/Screenshot_ Device Connection
+![Dashboard Health Metrics](android/app/src/main/res/Screenshot_1762069036.jpg)
 
-![Bluetooth Device Connect](android/app/src/main/res/Screenshot_ Disease Risk Assessment (Risk Factors)
+### Bluetooth Device Connect
 
-![Risk Factors Step](android/app/src/main/res/Screenshot_ Assessment – Personal Information Step
+![Bluetooth Device Connect](android/app/src/main/res/Screenshot_1762069040.jpg)
 
-![Personal Info Step](android/app/src/main/res/Screenshot_ – Health Metrics Step
+### Risk Factors (Multi-step Form)
 
-![Health Metrics](android/app/src/main/res/Screenshot_ Assessment – Result (Low Risk)
+![Risk Factors Step](android/app/src/main/res/Screenshot_1762069072.jpg)
 
-![Risk Assessment Result](android/app/src/main/res/Screenshot_ & Predict Step
+### Personal Info Step
 
-![Review Your Information](android/app/src/main/res/Screenshot_ Health Assistant Chat
+![Personal Info Step](android/app/src/main/res/Screenshot_1762069067.jpg)
 
-![AI Health Assistant](android/app/src/main/res/Screenshot_32 Hardware Setup
+### Health Metrics Step
 
-![ESP32 Health Monitor Setup](android/app/src/main/res/image Tech Stack
+![Health Metrics Step](android/app/src/main/res/Screenshot_1762069069.jpg)
 
-### ⚙️ Flutter Dependencies
-```yaml
-dependencies:
-  flutter_bluetooth_serial: ^0.4.0
-  fl_chart: ^0.64.0
-  font_awesome_flutter: ^10.4.0
-  json_annotation: ^4.8.1
-  shared_preferences: ^2.2.0
-  permission_handler: ^11.0.0
-```
+### Risk Assessment Result
 
-***
+![Risk Assessment Result](android/app/src/main/res/Screenshot_1762069085.jpg)
 
-## 📁 App Structure
+### Review & Predict Step
+
+![Review Your Information](android/app/src/main/res/Screenshot_1762069077.jpg)
+
+### AI Health Assistant
+
+![AI Health Assistant](android/app/src/main/res/Screenshot_1762069056.jpg)
+
+### Hardware Setup (ESP32)
+
+![ESP32 Setup](android/app/src/main/res/image.jpg)
+
+---
+
+## 🛠 Installation
 
 ```bash
-lib/
-├─ main.dart
-├─ models/
-│  ├─ health_data.dart
-│  └─ prediction_data.dart
-├─ services/
-│  └─ bluetooth_service.dart
-├─ pages/
-│  ├─ splash_screen.dart
-│  ├─ bluetooth_connection_page.dart
-│  ├─ dashboard.dart
-│  ├─ heart_disease_form.dart
-│  ├─ prediction_result_page.dart
-│  └─ settings_page.dart
-├─ components/
-│  ├─ health_card.dart
-│  ├─ health_line_chart.dart
-│  └─ device_status_card.dart
-└─ theme/
-   └─ app_theme.dart
-```
-***
+# clone
+git clone https://github.com/omkarMadkar/Helath-Monitor.git
+cd Helath-Monitor
 
-## 🔌 ESP32 Integration
-
-### 🧠 Hardware Features
-
-* Sensor: MAX30105 Heart Rate & SpO₂ sensor
-* Communication: Bluetooth Classic (Serial)
-* Display: 128×64 OLED screen
-* Data Format: JSON packets sent to app
-
-### 📡 Sample JSON Data
-
-```json
-{
-  "timestamp": 1724567890,
-  "heartRate": 78,
-  "spo2": 97,
-  "validHR": 1,
-  "validSpO2": 1
-}
+# ensure images are inside android/app/src/main/res/
+flutter pub get
+flutter packages pub run build_runner build
+flutter run
 ```
 
-### 🛠️ Supported Commands
+---
 
-| Command  | Description                     |
-| -------- | ------------------------------- |
-| `status` | Returns current sensor readings |
-| `info`   | Returns device info JSON        |
-| `reset`  | Reboots ESP32 device            |
+## ⚙️ About image file paths and common reasons images don't show
 
-***
+If images are not showing in the README on GitHub, check these:
 
-## 🚀 Getting Started
+1. **Files aren't committed** — make sure you ran `git add` + `git commit` + `git push`.
+2. **Wrong path** — markdown image references are relative to the README location. If README is at repo root, `android/app/src/main/res/IMG.jpg` must exist at that path in the repo.
+3. **Filename mismatch / case-sensitivity** — `Screenshot.jpg` ≠ `screenshot.jpg` on Linux/GitHub.
+4. **Spaces or special characters** — avoid them or URL-encode (use `My%20Image.jpg`).
+5. **Using local-only paths** — images on your machine (not in the repo) won't show on GitHub.
+6. **Large file size** — GitHub rejects very large files. Use smaller images or Git LFS.
+7. **Private repo access** — if someone else views your README in a different repo/branch the images must be present there.
 
-1. Clone the repository  
-2. Navigate to the project directory  
-3. Install dependencies:
-    ```bash
-    flutter pub get
-    ```
-4. Generate JSON serialization code:
-    ```bash
-    flutter packages pub run build_runner build
-    ```
-5. Run the app:
-    ```bash
-    flutter run
-    ```
+---
 
-### ESP32 Setup
-1. Flash the ESP32 firmware
-2. Set Bluetooth name to **ESP32-Health-Pro**
-3. Power on ESP32 → open MediBuddy → tap **Scan Devices**
-4. Connect and start monitoring!
+## 🔧 Optional: Use an `images/` folder instead (cleaner)
 
-***
+Some people prefer `docs/images/` or `assets/readme_images/`. If you move them, update the markdown paths accordingly.
 
-## 🗂️ Adding Screenshots/Images
+Example commands to create and move files:
 
-1. Place all screenshot images in your Android project at:  
-   ```
-   android/app/src/main/res/
-   ```
-2. Use the following file names (as shown above):
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069032.jpg) (Splash Screen)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069036.jpg) (Dashboard)
-   - `![Alt Text](android/app/src/main/res/Screenshot_1762069040.jpg) (Bluetooth Device Connect)
-   - `![Alt Text](android/app/src/main/res/Screenshot_1762069072.jpg) (Risk Factors)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069067.jpg) (Personal Info Step)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069069.jpg) (Health Metrics Step)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069085.jpg) (Risk Assessment Result)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069077.jpg) (Review Information)
-   - ![Alt Text](android/app/src/main/res/Screenshot_1762069056.jpg) (AI Assistant Chat)
-   - ![Alt Text](android/app/src/main/res/image.jpg) (ESP32 Setup)
-3. Reference these in your README as shown above using the markdown image syntax:
-   ```
-   ![Alt Text](android/app/src/main/res/FILENAME.jpg)
-   ```
-   Where `FILENAME.jpg` is replaced with each actual screenshot/hardware image filename.
+```bash
+mkdir -p docs/images
+mv android/app/src/main/res/*.jpg docs/images/
+# update README image links to docs/images/FILENAME.jpg
+```
 
-***
+---
 
-## 📜 License
+## 🧾 Troubleshooting checklist
 
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+1. `git status` — are there uncommitted files?
+2. `ls -la android/app/src/main/res/` — do the expected files appear?
+3. `git log --name-only -1` — did your last commit include the images?
+4. Open the raw file URL `https://raw.githubusercontent.com/<you>/<repo>/main/android/app/src/main/res/Screenshot_1762069032.jpg` — does it load? If yes, README path should work.
 
-***
+---
 
-## 💬 Support
+## 🧭 Final notes
 
-* Open an issue on [GitHub Issues](https://github.com/omkarMadkar/Helath-Monitor/issues)
-* Email the dev team
-* Refer to the Troubleshooting section above
+Once you add the images and push, GitHub will render the images in README.md automatically. If you want, I can also generate a smaller, web-optimized copy of each screenshot (reduce width/quality) so they load faster in the README.
 
-***
+---
 
-## 🧭 Credits
-
-Developed with ❤️ by **Omkar Madkar**  
-👨‍💻 [GitHub Profile](https://github.com/omkarMadkar)
-
-***
-
-
+*Developed with ❤️ by Omkar Madkar — MediBuddy*
