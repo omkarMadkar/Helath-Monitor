@@ -1,4 +1,3 @@
-Here is a properly formatted README file for your MediBuddy health monitoring app that includes code snippets for adding your app UI/UX screenshots and hardware images. It also provides step-by-step instructions on where to place these images in your Android project structure for best results.
 
 ***
 
@@ -206,3 +205,4 @@ Developed with ❤️ by **Omkar Madkar**
 👨‍💻 [GitHub Profile](https://github.com/omkarMadkar)
 
 ***
+
